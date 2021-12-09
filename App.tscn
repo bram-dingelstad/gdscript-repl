@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://App.gd" type="Script" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+
+[node name="App" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" type="Node" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_bottom = -36.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[wave]Hello there![/wave] Welcome to [color=green][url=https://bram.dingelstad.works/]Bram[/url]'s[/color] GDScript REPL / Terminal v1.0
+
+Do you like this little tool or have suggestions? [color=#0083EB][url=https://twitter.com/bram_dingelstad]Follow me on Twitter![/url][/color] or [color=crimson][url=%s]share it with your gamedev friends[/url][/color]
+You can also [color=yellow][url=https://hire.bram.dingelstad.works]hire me[/url][/color] to work on your next Godot project! 
+
+Please type a GDScript Expression below and type Enter!
+For instance: [wave] %s [/wave]
+
+"
+text = "Hello there! Welcome to Bram's GDScript REPL / Terminal v1.0
+
+Do you like this little tool or have suggestions? Follow me on Twitter! or share it with your gamedev friends
+You can also hire me to work on your next Godot project! 
+
+Please type a GDScript Expression below and type Enter!
+For instance:  %s 
+
+"
+scroll_following = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchor_top = 1.0
+anchor_right = 0.922
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = -0.128052
+size_flags_horizontal = 3
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Evaluate" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -46.0
+focus_mode = 0
+text = "Eval"
+__meta__ = {
+"_edit_use_anchors_": false
+}
